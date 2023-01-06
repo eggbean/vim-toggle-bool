@@ -18,6 +18,7 @@ let g:switch_custom_definitions =
     \   switch#NormalizedCase(['persistent', 'ephemeral']),
     \   switch#NormalizedCase(['internal', 'external']),
     \   switch#NormalizedCase(['ingress', 'egress']),
+    \   switch#NormalizedCase(['local', 'remote']),
     \   switch#NormalizedCase(['allow', 'deny']),
     \   switch#NormalizedCase(['all', 'none'])
     \ ]
@@ -45,6 +46,8 @@ function! ToggleBool()
    elseif search('\c\<internal\>\|\<external\>', '', line('.')) > 0
        Switch
    elseif search('\c\<ingress\>\|\<egress\>', '', line('.')) > 0
+       Switch
+   elseif search('\c\<local\>\|\<remote\>', '', line('.')) > 0
        Switch
    elseif search('\c\<allow\>\|\<deny\>', '', line('.')) > 0
        Switch

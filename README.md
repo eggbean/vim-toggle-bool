@@ -11,6 +11,7 @@ This is a very simple Vim plugin built on top of [switch.vim](https://github.com
 - `Persistent` ←→ `Ephemeral`
 - `Internal` ←→ `External`
 - `Ingress` ←→ `Egress`
+- `Local` ←→ `Remote`
 - `Allow` ←→ `Deny`
 - `All` ←→ `None`
 
