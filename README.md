@@ -5,12 +5,15 @@ This is a very simple Vim plugin built on top of [switch.vim](https://github.com
 - `Yes` ←→ `No`
 - `On` ←→ `Off`
 - `1` ←→ `0`
+- `In` ←→ `Out`
 - `Enable(d)` ←→ `Disable(d)`
 - `First` ←→ `Last`
 - `Before` ←→ `After`
 - `Persistent` ←→ `Ephemeral`
 - `Internal` ←→ `External`
 - `Ingress` ←→ `Egress`
+- `Public` ←→ `Private`
+- `Enter` ←→ `Exit`
 - `Local` ←→ `Remote`
 - `Allow` ←→ `Deny`
 - `All` ←→ `None`

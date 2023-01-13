@@ -11,6 +11,7 @@ let g:switch_custom_definitions =
     \   switch#NormalizedCase(['true', 'false']),
     \   switch#NormalizedCase(['yes', 'no']),
     \   switch#NormalizedCase(['on', 'off']),
+    \   switch#NormalizedCase(['in', 'out']),
     \   switch#NormalizedCase(['enable', 'disable']),
     \   switch#NormalizedCase(['enabled', 'disabled']),
     \   switch#NormalizedCase(['first', 'last']),
@@ -18,6 +19,8 @@ let g:switch_custom_definitions =
     \   switch#NormalizedCase(['persistent', 'ephemeral']),
     \   switch#NormalizedCase(['internal', 'external']),
     \   switch#NormalizedCase(['ingress', 'egress']),
+    \   switch#NormalizedCase(['public', 'private']),
+    \   switch#NormalizedCase(['enter', 'exit']),
     \   switch#NormalizedCase(['local', 'remote']),
     \   switch#NormalizedCase(['allow', 'deny']),
     \   switch#NormalizedCase(['all', 'none'])
@@ -33,6 +36,8 @@ function! ToggleBool()
        Switch
    elseif search('\c\<on\>\|\<off\>', '', line('.')) > 0
        Switch
+   elseif search('\c\<in\>\|\<out\>', '', line('.')) > 0
+       Switch
    elseif search('\c\<enable\>\|\<disable\>', '', line('.')) > 0
        Switch
    elseif search('\c\<enabled\>\|\<disabled\>', '', line('.')) > 0
@@ -46,6 +51,10 @@ function! ToggleBool()
    elseif search('\c\<internal\>\|\<external\>', '', line('.')) > 0
        Switch
    elseif search('\c\<ingress\>\|\<egress\>', '', line('.')) > 0
+       Switch
+   elseif search('\c\<public\>\|\<private\>', '', line('.')) > 0
+       Switch
+   elseif search('\c\<enter\>\|\<exit\>', '', line('.')) > 0
        Switch
    elseif search('\c\<local\>\|\<remote\>', '', line('.')) > 0
        Switch
